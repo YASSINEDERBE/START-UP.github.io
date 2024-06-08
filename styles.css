@@ -1,0 +1,178 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #05410e;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+#hero {
+    height: 400px; /* Modifiez cette valeur selon vos besoins */
+    background: url('1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0e6307;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+
+.hero-content .btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.hero-content .btn:hover {
+    background: #0056b3;
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.features-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    margin: 20px 0;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature img {
+    width: 50px; /* Ajustez la taille de l'icône selon vos besoins */
+    margin-bottom: 10px; /* Ajoute un espace entre l'icône et le titre */
+}
+
+.feature h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+}
+
+
+.team-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    border-radius: 20%;
+    width: 300px;
+    height: 300px;
+}
+
+.team-member a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+footer {
+    background: #003b0b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .features-content, .team-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature, .team-member {
+        width: 80%;
+    }
+}

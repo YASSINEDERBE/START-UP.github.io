@@ -15,6 +15,12 @@ header {
     top: 0;
     z-index: 1000;
 }
+.logo img {
+    width: 500px;  /* Set the width */
+    height: 500px; /* Set the height */
+}
+
+
 
 header nav {
     display: flex;

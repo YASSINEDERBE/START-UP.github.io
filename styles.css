@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: #05410e;
+    background: #60a4f1;
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -47,43 +47,135 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: #575757;
+    background: #050505;
     border-radius: 5px;
 }
 
+/* Section Styling */
 #hero {
-    height: 400px; /* Modifiez cette valeur selon vos besoins */
-    background: url('1.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #0e6307;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('business-plan-superette.jpg') no-repeat center center/cover;
+    color: white;
     text-align: center;
-    padding: 0 20px;
 }
 
+/* Hero Content */
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+}
 
+/* Heading Animation */
 .hero-content h2 {
     font-size: 2.5em;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInDown 1s ease-in-out forwards;
 }
 
+/* Paragraph Animation */
 .hero-content p {
     font-size: 1.2em;
-    margin: 0 0 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
+/* Button Styling */
 .hero-content .btn {
-    background: #007BFF;
-    color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
+    background-color: #60d0f5;
+    color: white;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
     font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero-content .btn:hover {
-    background: #0056b3;
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Section Styling */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+/* About Content Styling */
+.about-content {
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #5ba5d3;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #4f93f3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+/* Paragraph Styling */
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 section {
@@ -101,61 +193,278 @@ section p {
     margin-bottom: 20px;
 }
 
-.features-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.feature {
-    width: 30%;
-    margin: 20px 0;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
+/* General Section Styling */
+#features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
+#features h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+#features h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #ff6600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+/* Features Content Styling */
+.features-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Feature Styling */
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .feature img {
-    width: 50px; /* Ajustez la taille de l'icône selon vos besoins */
-    margin-bottom: 10px; /* Ajoute un espace entre l'icône et le titre */
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .feature h3 {
-    font-size: 20px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
     color: #333;
 }
 
 .feature p {
+    font-size: 1.2em;
     color: #666;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.team-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    .feature {
+        width: 80%;
+    }
 }
 
-.team-member {
+
+
+/* General Section Styling */
+#team {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    margin: 20px;
+}
+
+#team h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+#team h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #ff6600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+/* Team Content Styling */
+.team-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Team Member Styling */
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-member img {
-    border-radius: 20%;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
 }
 
 .team-member a {
-    color: #007BFF;
-    text-decoration: none;
+    color: #0077b5;
     font-size: 1.5em;
+    transition: color 0.3s ease;
 }
 
+.team-member a:hover {
+    color: #005582;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
+
+/* General Section Styling */
+/* General Section Styling */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Contact Image Styling */
+.contact-image {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-info a {
+    color: #4acde7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Hover and Transition Effects */
+.contact-info:hover h2 {
+    color: #1d81b3;
+}
+
+.contact-info:hover p {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        padding: 0;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info p {
+        margin-bottom: 15px;
+    }
+}
+
+
 footer {
-    background: #003b0b;
+    background: #2e7fcb;
     color: #fff;
     padding: 20px 0;
     text-align: center;
